@@ -1,4 +1,4 @@
-package hello;
+package ru.tusur.gpo.data;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

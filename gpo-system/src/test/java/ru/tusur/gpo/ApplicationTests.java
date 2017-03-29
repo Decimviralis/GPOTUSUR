@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package hello;
+package ru.tusur.gpo;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -26,6 +26,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import ru.tusur.gpo.repository.PersonRepository;
 
 import static org.hamcrest.Matchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;

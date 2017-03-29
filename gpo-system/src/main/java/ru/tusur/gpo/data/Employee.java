@@ -1,22 +1,14 @@
-package hello;
-
-import org.hibernate.mapping.IdentifierCollection;
+package ru.tusur.gpo.data;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Created by maxim on 29.03.17.
  */
 public class Employee {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     private long id;
-
-    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
-
     private int personnelNumber;
     private long innNumber;
     private String snilsNumber;
@@ -37,6 +29,7 @@ public class Employee {
     public void setId() {
         this.id = id;
     }
+
     public int getPersonnelNumber() {
         return personnelNumber;
     }

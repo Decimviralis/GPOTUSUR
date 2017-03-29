@@ -1,4 +1,4 @@
-package hello;
+package ru.tusur.gpo.data;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -14,8 +14,9 @@ public class Education {
     @ManyToOne
     @JoinColumn(name="employee_id", nullable = false)
     private Employee employee;
+
     private String educationType;
-    private String Education;
+    private String education;
     private String institutionName;
     private String institutionAddress;
     private Date instituteFinishYear;
@@ -37,11 +38,11 @@ public class Education {
     }
 
     public String getEducation() {
-        return Education;
+        return education;
     }
 
     public void setEducation(String education) {
-        Education = education;
+        this.education = education;
     }
 
     public String getInstitutionName() {
