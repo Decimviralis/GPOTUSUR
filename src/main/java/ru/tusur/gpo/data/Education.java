@@ -6,6 +6,7 @@ import java.util.Date;
 /**
  * Created by maxim on 29.03.17.
  */
+@Entity
 public class Education {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,6 +21,18 @@ public class Education {
     private String institutionName;
     private String institutionAddress;
     private Date instituteFinishYear;
+
+    public Education() {
+    }
+
+    public Education(Employee employee, String educationType, String education, String institutionName, String institutionAddress, Date instituteFinishYear) {
+        this.employee = employee;
+        this.educationType = educationType;
+        this.education = education;
+        this.institutionName = institutionName;
+        this.institutionAddress = institutionAddress;
+        this.instituteFinishYear = instituteFinishYear;
+    }
 
     public Employee getEmployee() {
         return employee;

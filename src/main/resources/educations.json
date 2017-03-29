@@ -1,0 +1,23 @@
+[
+  {
+  "employee": "http://localhost:8080/employee/1",
+  "educationType": "high",
+  "education": "wtf",
+  "institutionName": "mgu",
+  "institutionAddress": "moscow"
+  },
+  {
+    "employee": "http://localhost:8080/employee/2",
+    "educationType": "low",
+    "education": "wtf",
+    "institutionName": "tusur",
+    "institutionAddress": "surgut"
+  },
+  {
+    "employee": "http://localhost:8080/employee/1",
+    "educationType": "low",
+    "education": "SLESAR",
+    "institutionName": "PTU",
+    "institutionAddress": "Ukraine"
+  }
+]

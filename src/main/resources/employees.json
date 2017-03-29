@@ -1,0 +1,24 @@
+[
+  {
+    "personnelNumber": 1,
+    "innNumber": 12312313123,
+    "snilsNumber": "werwre123123123123",
+    "sex": "m",
+    "computerSkills": "high",
+    "driveDocs": "no",
+    "previousConviction": "wtf",
+    "societyStatus": "major",
+    "maritalStatus": "wtf"
+  },
+  {
+    "personnelNumber": 2,
+    "innNumber": 1233453453123,
+    "snilsNumber": "wesdfxc123123123123",
+    "sex": "f",
+    "computerSkills": "low",
+    "driveDocs": "yes",
+    "previousConviction": "wtf",
+    "societyStatus": "nice",
+    "maritalStatus": "wtf"
+  }
+]

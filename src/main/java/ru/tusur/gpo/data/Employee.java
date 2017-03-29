@@ -4,6 +4,7 @@ import javax.persistence.*;
 /**
  * Created by maxim on 29.03.17.
  */
+@Entity
 public class Employee {
 
     @Id
@@ -19,8 +20,19 @@ public class Employee {
     private String societyStatus;
     private String maritalStatus;
 
-    public Employee(int personnelNumber) {
+    public Employee() {
+    }
+
+    public Employee(int personnelNumber, long innNumber, String snilsNumber, char sex, String computerSkills, String driveDocs, String previousConviction, String societyStatus, String maritalStatus) {
         this.personnelNumber = personnelNumber;
+        this.innNumber = innNumber;
+        this.snilsNumber = snilsNumber;
+        this.sex = sex;
+        this.computerSkills = computerSkills;
+        this.driveDocs = driveDocs;
+        this.previousConviction = previousConviction;
+        this.societyStatus = societyStatus;
+        this.maritalStatus = maritalStatus;
     }
 
     public long getId()    {
