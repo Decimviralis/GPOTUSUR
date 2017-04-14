@@ -6,9 +6,7 @@ import ru.tusur.gpo.data.Education;
 
 import java.util.List;
 
-/**
- * Created by nkurtushin on 29.03.2017.
- */
+
 
 @RepositoryRestResource(collectionResourceRel = "education", path = "education")
 public interface EducationRepository extends PagingAndSortingRepository<Education, Long> {
