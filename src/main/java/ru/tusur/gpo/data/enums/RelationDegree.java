@@ -1,4 +1,4 @@
-package ru.tusur.gpo.data;
+package ru.tusur.gpo.data.enums;
 
 /**
  * Created by maxim on 07.05.17.

@@ -1,6 +1,6 @@
 package ru.tusur.gpo.data;
 
-import com.sun.org.apache.regexp.internal.RE;
+import ru.tusur.gpo.data.enums.RelationDegree;
 
 
 import javax.persistence.*;
@@ -16,7 +16,7 @@ public class Family {
     private int familyId;
 
     @ManyToOne
-    @JoinColumn (name = "employeeId", nullable = false)
+    @JoinColumn (name = "employee_id", nullable = false)
     private Employee employee;
 
     @Enumerated(EnumType.STRING)

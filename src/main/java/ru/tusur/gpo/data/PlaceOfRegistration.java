@@ -13,7 +13,10 @@ public class PlaceOfRegistration {
         private long id;
 
         @ManyToOne
-        @JoinColumn(name = "passportDataID", nullable = false)
+        @JoinColumns({
+                @JoinColumn(name = "series"),
+                @JoinColumn(name = "number")
+        })
         private PassportData passportDataID;
 
         private String registrationStatus;

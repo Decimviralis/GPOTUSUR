@@ -1,5 +1,7 @@
 package ru.tusur.gpo.data;
 
+import ru.tusur.gpo.data.enums.AddressStatus;
+
 import javax.persistence.*;
 
 
@@ -13,10 +15,11 @@ public class ActualAddressOfResidence {
     private long id;
 
     @ManyToOne
-    @JoinColumn (name = "Employee_id", nullable = false)
+    @JoinColumn (name = "employee_id", nullable = false)
     private Employee employee;
 
-    private String addressStatus;
+    @Enumerated(EnumType.STRING)
+    private AddressStatus addressStatus;
     private String region;
     private String locality;
     private String area;
@@ -27,7 +30,7 @@ public class ActualAddressOfResidence {
 
     }
 
-    public ActualAddressOfResidence(Employee employee,String addressStatus, String region, String locality, String area, String street, String home)  {
+    public ActualAddressOfResidence(Employee employee,AddressStatus addressStatus, String region, String locality, String area, String street, String home)  {
         this.employee = employee;
         this.addressStatus = addressStatus;
         this.region = region;
@@ -45,11 +48,11 @@ public class ActualAddressOfResidence {
         this.employee = employee;
     }
 
-    public String getAddressStatus() {
+    public AddressStatus getAddressStatus() {
         return addressStatus;
     }
 
-    public void setAddressStatus(String addressStatus) {
+    public void setAddressStatus(AddressStatus addressStatus) {
         this.addressStatus = addressStatus;
     }
 

@@ -1,5 +1,7 @@
 package ru.tusur.gpo.data;
 
+import ru.tusur.gpo.data.enums.EducationType;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -16,7 +18,7 @@ public class Education {
     @JoinColumn(name="employee_id", nullable = false)
     private Employee employee;
 
-    private String educationType;
+    private EducationType educationType;
     private String education;
     private String institutionName;
     private String institutionAddress;
@@ -25,7 +27,7 @@ public class Education {
     public Education() {
     }
 
-    public Education(Employee employee, String educationType, String education, String institutionName, String institutionAddress, Date instituteFinishYear) {
+    public Education(Employee employee, EducationType educationType, String education, String institutionName, String institutionAddress, Date instituteFinishYear) {
         this.employee = employee;
         this.educationType = educationType;
         this.education = education;
@@ -42,11 +44,11 @@ public class Education {
         this.employee = employee;
     }
 
-    public String getEducationType() {
+    public EducationType getEducationType() {
         return educationType;
     }
 
-    public void setEducationType(String educationType) {
+    public void setEducationType(EducationType educationType) {
         this.educationType = educationType;
     }
 

@@ -16,7 +16,7 @@ public class Experience {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "employeeId", nullable = false)
+    @JoinColumn(name = "employee_id", nullable = false)
     private Employee employee;
 
     private String fieldOfActivity;

@@ -1,12 +1,17 @@
 package ru.tusur.gpo.data;
 
 import javax.persistence.Embeddable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import java.io.Serializable;
 
 /**
  * Created by maxim on 07.05.17.
  */
 @Embeddable
-public class LanguageSkillsID {
+public class LanguageSkillsID implements Serializable {
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
     protected Employee employee;
     protected String language;
     protected String levelOfKnowledge;

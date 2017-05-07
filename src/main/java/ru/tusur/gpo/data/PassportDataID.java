@@ -1,22 +1,37 @@
 package ru.tusur.gpo.data;
 
 import javax.persistence.Embeddable;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
+import java.io.Serializable;
 
 /**
  * Created by maxim on 07.05.17.
  */
 @Embeddable
-public class PassportDataID {
-    protected long passportSeries;
-    protected long passportNumber;
+public class PassportDataID implements Serializable {
+    protected String series;
+    protected String number;
 
     public PassportDataID () {}
 
-    public PassportDataID (long passportSeries, long passportNumber)    {
-        this.passportSeries = passportSeries;
-        this.passportNumber = passportNumber;
+    public PassportDataID (String series, String number)    {
+        this.series = series;
+        this.number = number;
+    }
+
+    public String getSeries() {
+        return series;
+    }
+
+    public void setSeries(String series) {
+        this.series = series;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     @Override
@@ -26,14 +41,15 @@ public class PassportDataID {
 
         PassportDataID that = (PassportDataID) o;
 
-        if (passportSeries != that.passportSeries) return false;
-        return passportNumber == that.passportNumber;
+        if (series != null ? !series.equals(that.series) : that.series != null) return false;
+        return number != null ? number.equals(that.number) : that.number == null;
+
     }
 
     @Override
     public int hashCode() {
-        int result = (int) (passportSeries ^ (passportSeries >>> 32));
-        result = 31 * result + (int) (passportNumber ^ (passportNumber >>> 32));
+        int result = series != null ? series.hashCode() : 0;
+        result = 31 * result + (number != null ? number.hashCode() : 0);
         return result;
     }
 }

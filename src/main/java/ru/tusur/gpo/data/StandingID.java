@@ -1,13 +1,18 @@
 package ru.tusur.gpo.data;
 
 import javax.persistence.Embeddable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by maxim on 07.05.17.
  */
 @Embeddable
-public class StandingID {
+public class StandingID implements Serializable {
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
     protected Employee employee;
     protected String typeOfWorkActivity;
     protected String placeOfWork;
