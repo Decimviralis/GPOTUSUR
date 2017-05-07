@@ -10,6 +10,7 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private int personnelNumber;
     private long innNumber;
     private String snilsNumber;
@@ -19,11 +20,15 @@ public class Employee {
     private String previousConviction;
     private String societyStatus;
     private String maritalStatus;
+    private String personalEmail;
+    private String personalPhoneNumber;
+    private String corporateEmail;
+    private String corporatePhoneNumber;
 
     public Employee() {
     }
 
-    public Employee(int personnelNumber, long innNumber, String snilsNumber, char sex, String computerSkills, String driveDocs, String previousConviction, String societyStatus, String maritalStatus) {
+    public Employee(int personnelNumber, long innNumber, String snilsNumber, char sex, String computerSkills, String driveDocs, String previousConviction, String societyStatus, String maritalStatus, String personalEmail, String personalPhoneNumber, String corporateEmail, String corporatePhoneNumber) {
         this.personnelNumber = personnelNumber;
         this.innNumber = innNumber;
         this.snilsNumber = snilsNumber;
@@ -33,6 +38,10 @@ public class Employee {
         this.previousConviction = previousConviction;
         this.societyStatus = societyStatus;
         this.maritalStatus = maritalStatus;
+        this.personalEmail = personalEmail;
+        this.personalPhoneNumber = personalPhoneNumber;
+        this.corporateEmail = corporateEmail;
+        this.corporatePhoneNumber = corporatePhoneNumber;
     }
 
     public long getId()    {
@@ -112,5 +121,37 @@ public class Employee {
 
     public void setMaritalStatus(String maritalStatus) {
         this.maritalStatus = maritalStatus;
+    }
+
+    public String getPersonalEmail() {
+        return personalEmail;
+    }
+
+    public void setPersonalEmail(String personalEmail) {
+        this.personalEmail = personalEmail;
+    }
+
+    public String getPersonalPhoneNumber() {
+        return personalPhoneNumber;
+    }
+
+    public void setPersonalPhoneNumber(String personalPhoneNumber) {
+        this.personalPhoneNumber = personalPhoneNumber;
+    }
+
+    public String getCorporateEmail() {
+        return corporateEmail;
+    }
+
+    public void setCorporateEmail(String corporateEmail) {
+        this.corporateEmail = corporateEmail;
+    }
+
+    public String getCorporatePhoneNumber() {
+        return corporatePhoneNumber;
+    }
+
+    public void setCorporatePhoneNumber(String corporatePhoneNumber) {
+        this.corporatePhoneNumber = corporatePhoneNumber;
     }
 }
